@@ -1,13 +1,15 @@
 import { useOutletContext } from 'react-router-dom'
 
 
-import HeroSection from '@/components/home/HeroSection'
-import CategoryList from '@/components/home/CategoryList'
-import RandomRecipeCard from '@/components/home/RandomRecipeCard'
-import RecipeCard from '@/components/RecipeCard'
+import {
+  HeroSection,
+  CategoryList,
+  RandomRecipeCard,
+  RecipeCard,
+  SkeletonCard,
+  EmptyState
+} from '@/components'
 import useRecipes from '@/hooks/useRecipes'
-import SkeletonCard from '@/components/common/SkeletonCard'
-import EmptyState from '@/components/common/EmptyState'
 
 
 
