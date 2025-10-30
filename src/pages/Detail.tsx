@@ -10,8 +10,9 @@ export default function Detail() {
   const { recipe, loading, error } = useRecipeDetail(id)
 
   // 상태별 화면 처리
-  const stateView = <DetailState loading={loading} error={error} recipe={recipe} />
-  if (stateView) return stateView
+  if (loading || error || !recipe) {
+    return <DetailState loading={loading} error={error} recipe={recipe} />
+  }
 
   return (
     <div className="max-w-3xl mx-auto py-6 space-y-6 animate-fadeIn">
@@ -34,7 +35,12 @@ export default function Detail() {
         Back
       </button>
 
-      <DetailHeader {...recipe} />
+      <DetailHeader
+        title={recipe.strMeal}
+        category={recipe.strCategory}
+        area={recipe.strArea}
+        thumb={recipe.strMealThumb}
+      />
       <IngredientsList recipe={recipe} />
       <InstructionSection text={recipe.strInstructions} />
       {recipe.strYoutube && <VideoSection url={recipe.strYoutube} />}
