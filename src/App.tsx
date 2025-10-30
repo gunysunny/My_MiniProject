@@ -6,19 +6,15 @@ import { Detail, Home } from "@/pages"
 
 
 
-function App() {
-
+export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Layout을 감싸는 구조 */}
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/recipe/:id" element={<Detail />} />
         </Route>
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
-
-export default App
