@@ -1,2 +1,5 @@
+export { default as DetailContent } from './DetailState'
+export { default as InstructionSection } from './InstructionSection'
+export { default as VideoSection } from './VideoSection'
 export { default as DetailHeader } from './DetailHeader'
 export { default as IngredientsList } from './IngredientsList'
