@@ -29,6 +29,7 @@ export default function Detail() {
           hover:-translate-y-[1px]
           transition-all duration-200
           shadow-sm
+          cursor-pointer
         "
       >
         <span className="text-lg">←</span>
